@@ -27,6 +27,15 @@ describe('json-schema-filter', function(){
         "type": "object",
         "required": false
       },
+      "generalWithProperties": {
+        "type": ["object", "null"],
+        "required": false,
+        "properties": {
+          "randomField": {
+            "type": "string"
+          }
+        }
+      },
       "contacts": {
         "type": "array",
         "id": "http://jsonschema.net/contacts",
@@ -160,6 +169,18 @@ describe('json-schema-filter', function(){
 
     expect(results).to.eql(document)
 
+  });
+
+  it('does not filter out null fields', function() {
+      var document = {
+          firstName: 'Andrew',
+          contacts: [{phone: '5146666666'}, NaN],
+          generalWithProperties: null
+      }
+
+      var result = filter(schema, document);
+
+      expect(result).to.eql({firstName: 'Andrew', contacts: [{phone: '5146666666'}, NaN], generalWithProperties: null});
   });
 
   it('ignores non-objects when expecting objects', function() {
