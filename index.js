@@ -48,7 +48,7 @@ function filterObjectOnSchema(schema, doc) {
             // keep the child if it's defined properly or null
             result[key] = filteredChild;
         });
-    } else if (type === 'array' && Array.isArray(doc)) {
+    } else if (type === 'array' && Array.isArray(doc) && schema.items) {
         // check that the doc is also an array
         result = [];
         doc.forEach(function(item) {
