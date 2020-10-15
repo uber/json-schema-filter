@@ -1,6 +1,6 @@
 {
-  "name": "uber-json-schema-filter",
-  "version": "2.0.5",
+  "name": "json-schema-filter-js",
+  "version": "1.0.0",
   "description": "Filters (removes) objects from document based on passed json-schema",
   "main": "index.js",
   "devDependencies": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/uber/json-schema-filter.git"
+    "url": "https://github.com/chathurabuddi/json-schema-filter-js.git"
   },
   "keywords": [
     "json-schema",
@@ -21,8 +21,11 @@
     "module"
   ],
   "author": "Andrew Lank",
+  "contributors": [
+    "chathurabuddi <contact@chathurabuddi.lk> (http://chathurabuddi.lk)"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uber/json-schema-filter/issues"
+    "url": "https://github.com/chathurabuddi/json-schema-filter-js/issues"
   }
 }

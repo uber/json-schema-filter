@@ -1,4 +1,4 @@
-#json-schema-filter
+#json-schema-filter-js
 
 Filters (removes) objects recursively from document based on passed json-schema
 
@@ -9,14 +9,14 @@ For performance reasons it is assumed that the json-schema contains less items t
 ### Install
 
 ```bash
-$ npm install uber-json-schema-filter
+$ npm install json-schema-filter-js
 ```
 
 ### Usage...
 
 ```javascript
 
-var filter = require('uber-json-schema-filter');
+var filter = require('json-schema-filter-js');
 
 var schema = {
     "title": "Example Schema",
